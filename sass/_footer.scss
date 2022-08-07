@@ -1,0 +1,57 @@
+.footer {
+    width: 100%;
+    background: $mainText;
+    padding: 1rem;
+    color: $mainText;
+    font-size: 3rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1rem solid #008ed6;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 66;
+    @include small-phone {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__icon {
+        display: flex;
+        justify-content: space-around;
+        &>*:not(:last-child) {
+            padding-right: 2rem;
+            @include small-phone {
+                padding-right: 0;
+            }
+        }
+        & div:nth-child(1) {
+            margin-left: 3rem;
+            @include small-phone {
+                margin-left: 0;
+            }
+        }
+    }
+    &__date {
+        margin-right: 3rem;
+        color: #000;
+        @include small-phone {
+            margin-right: 0;
+            font-size: 1rem;
+        }
+    }
+    .fb {
+        color: #008ed6;
+    }
+    .tw {
+        color: #008ed6;
+    }
+    .ins {
+        color: rgb(68, 0, 0);
+    }
+    .wap {
+        color: #06ff44;
+    }
+}
